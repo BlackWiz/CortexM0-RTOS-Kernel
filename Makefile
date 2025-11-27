@@ -25,10 +25,10 @@ OBJDUMP = arm-none-eabi-objdump
 SIZE = arm-none-eabi-size
 
 # Source files for main demonstration
-C_SRCS = main.c rtos.c startup.c syscalls.c
+C_SRCS = main.c rtos.c startup.c syscalls.c uart.c delay.c
 ASM_SRCS = context_switch.s
 
-# Source files for test suite
+# Source files for test suite  
 TEST_C_SRCS = test_suite.c rtos.c startup.c syscalls.c uart.c delay.c
 TEST_ASM_SRCS = context_switch.s
 
@@ -60,7 +60,7 @@ TEST_CFLAGS += -DRTOS_TEST_BUILD
 
 # Assembler flags
 ASFLAGS = $(MCU)
-ASFLAGS += -g3
+ASFLAGS += -g
 
 # Linker flags
 LDFLAGS = $(MCU)
@@ -259,5 +259,3 @@ help:
 	@echo "  ✓ Tickless idle mode"
 	@echo "  ✓ Stack overflow detection"
 	@echo "========================================"
-
-/*** end of file ***/

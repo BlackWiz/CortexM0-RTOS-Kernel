@@ -1,0 +1,11 @@
+# Build Artifacts
+*.o
+*.elf
+*.map
+*.asm
+*.bin
+*.hex
+*.d
+
+# Debug files
+*.log
